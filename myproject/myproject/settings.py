@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "webapp" / "static",
 ]
 
 
@@ -126,3 +126,21 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Email Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# Import email config
+try:
+    from email_config import EMAIL_CONFIG
+    EMAIL_HOST_USER = EMAIL_CONFIG['EMAIL_HOST_USER']
+    EMAIL_HOST_PASSWORD = EMAIL_CONFIG['EMAIL_HOST_PASSWORD']
+    DEFAULT_FROM_EMAIL = EMAIL_CONFIG['DEFAULT_FROM_EMAIL']
+except ImportError:
+    # Fallback values - replace these with your actual Gmail credentials
+    EMAIL_HOST_USER = 'saniyadav7755@gmail.com'
+    EMAIL_HOST_PASSWORD = 'zjat vjpa gqma zaav'
+    DEFAULT_FROM_EMAIL = 'sani228142@gmail.com'

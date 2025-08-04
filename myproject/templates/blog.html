@@ -28,10 +28,7 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-    <!-- Spinner -->
-    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
-    </div>
+   
 
     <!-- Topbar -->
     <div class="container-fluid bg-dark py-2 d-none d-md-flex">
@@ -39,7 +36,7 @@
             <div class="d-flex justify-content-between topbar">
                 <div class="top-info">
                     <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-secondary"></i></a>23 Delhi-NCR, India</small>
-                    <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-secondary"></i></a>klyadav228142@gmail.com</small>
+                    <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-secondary"></i></a>kltechitsolution@gmail.com</small>
                 </div>
                 <div id="note" class="text-secondary d-none d-xl-flex"><small>Note: Empowering Your Business Growth</small></div>
                 <div class="top-link">
@@ -155,7 +152,7 @@
                 <!-- Blog Post 1 -->
                 <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".3s">
                     <div class="blog-item position-relative bg-light rounded">
-                        <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="Web Design Blog">
+                        <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid blog-img-circle mx-auto d-block" alt="Web Design Blog">
                         <span class="position-absolute px-4 py-3 bg-primary text-white rounded" style="top: -28px; right: 20px;">Web Design</span>
                         <div class="blog-btn d-flex justify-content-between position-relative px-3" style="margin-top: -75px;">
                             <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
@@ -173,10 +170,10 @@
                             </div>
                         </div>
                         <div class="blog-content text-center position-relative px-3" style="margin-top: -25px;">
-                            <img src="{% static 'img/admin.jpg' %}" class="img-fluid rounded-circle border border-4 border-white mb-3" alt="Blog Author">
-                            <h5>By Daniel Martin</h5>
-                            <span class="text-secondary">24 March 2023</span>
-                            <p class="py-2">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum. Aliquam dolor eget urna ultricies tincidunt libero sit amet</p>
+                            <img src="{% static 'img/sani2.0.jpg' %}" class="img-fluid rounded-circle border border-4 border-white mb-3 author-img-circle" alt="Blog Author">
+                            <h5>By Sani Yadav</h5>
+                            <span class="text-secondary">24 March 2025</span>
+                            <p class="py-2">We design fast, responsive, and visually stunning websites that work on all devices and help you grow your digital presence effectively.</p>
                         </div>
                         <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
                             <a href="#" class="text-white"><small><i class="fas fa-share me-2 text-secondary"></i>5324 Share</small></a>
@@ -187,7 +184,7 @@
                 <!-- Blog Post 2 -->
                 <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".5s">
                     <div class="blog-item position-relative bg-light rounded">
-                        <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid w-100 rounded-top" alt="Development Blog">
+                        <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid blog-img-circle mx-auto d-block" alt="Development Blog">
                         <span class="position-absolute px-4 py-3 bg-primary text-white rounded" style="top: -28px; right: 20px;">Development</span>
                         <div class="blog-btn d-flex justify-content-between position-relative px-3" style="margin-top: -75px;">
                             <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
@@ -205,10 +202,10 @@
                             </div>
                         </div>
                         <div class="blog-content text-center position-relative px-3" style="margin-top: -25px;">
-                            <img src="{% static 'img/admin.jpg' %}" class="img-fluid rounded-circle border border-4 border-white mb-3" alt="Blog Author">
-                            <h5>By Daniel Martin</h5>
-                            <span class="text-secondary">23 April 2023</span>
-                            <p class="py-2">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum. Aliquam dolor eget urna ultricies tincidunt libero sit amet</p>
+                            <img src="{% static 'img/ayush4.jpg' %}" class="img-fluid rounded-circle border border-4 border-white mb-3 author-img-circle" alt="Blog Author">
+                            <h5>By Ayush Sukla</h5>
+                            <span class="text-secondary">23 April 2025</span>
+                            <p class="py-2">Learn how to build websites and web apps with HTML, CSS, JavaScript, and Django — from basic concepts to real-world project development.</p>
                         </div>
                         <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
                             <a href="#" class="text-white"><small><i class="fas fa-share me-2 text-secondary"></i>5324 Share</small></a>
@@ -219,7 +216,7 @@
                 <!-- Blog Post 3 -->
                 <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".7s">
                     <div class="blog-item position-relative bg-light rounded">
-                        <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid w-100 rounded-top" alt="Mobile App Blog">
+                        <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid blog-img-circle mx-auto d-block" alt="Mobile App Blog">
                         <span class="position-absolute px-4 py-3 bg-primary text-white rounded" style="top: -28px; right: 20px;">Mobile App</span>
                         <div class="blog-btn d-flex justify-content-between position-relative px-3" style="margin-top: -75px;">
                             <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
@@ -237,10 +234,10 @@
                             </div>
                         </div>
                         <div class="blog-content text-center position-relative px-3" style="margin-top: -25px;">
-                            <img src="{% static 'img/admin.jpg' %}" class="img-fluid rounded-circle border border-4 border-white mb-3" alt="Blog Author">
-                            <h5>By Daniel Martin</h5>
-                            <span class="text-secondary">30 Jan 2023</span>
-                            <p class="py-2">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum. Aliquam dolor eget urna ultricies tincidunt libero sit amet</p>
+                            <img src="{% static 'img/ambuj05.jpg' %}" class="img-fluid rounded-circle border border-4 border-white mb-3 author-img-circle" alt="Blog Author">
+                            <h5>By Ambuj Maurya</h5>
+                            <span class="text-secondary">30 Jan 2025</span>
+                            <p class="py-2">Learn to design, develop, and launch mobile apps for Android and iOS using modern tools like Flutter, React Native, and Kotlin step-by-step.</p>
                         </div>
                         <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
                             <a href="#" class="text-white"><small><i class="fas fa-share me-2 text-secondary"></i>5324 Share</small></a>
@@ -292,11 +289,11 @@
                     <a href="#" class="h3 text-secondary">Contact Us</a>
                     <div class="text-white mt-4 d-flex flex-column contact-link">
                         <a href="#" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i> Delhi-NCR, India</a>
-                        <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> 91 8004349641</a>
-                        <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>klyadav228142@gmail.com</a>
+                        <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> 91 9453775009</a>
+                        <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>info@kltechitsolution.com</a>
                     </div>
                 </div>
-            </div>
+            </div
             <hr class="text-light mt-5 mb-4">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
