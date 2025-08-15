@@ -548,6 +548,11 @@
         transform: translateY(-3px);
       }
       
+      /* Fallback: show carousel content even if JS fails to initialize */
+      .owl-carousel {
+        display: block !important;
+      }
+      
       /* Responsive improvements */
       @media (max-width: 768px) {
         .carousel-caption {
