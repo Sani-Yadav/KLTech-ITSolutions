@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug JavaScript</title>
+</head>
+<body>
+    <h1>Debug JavaScript</h1>
+    <p>Open browser console to see errors</p>
+    
+    <script>
+        // Check if static files are loading correctly
+        window.addEventListener('error', function(e) {
+            console.error('Script error:', e.target.src || e.target.href);
+        }, true);
+        
+        // Try loading the main.js file
+        var script = document.createElement('script');
+        script.src = '/static/js/main.js';
+        script.onerror = function() {
+            console.error('Failed to load main.js');
+        };
+        script.onload = function() {
+            console.log('Successfully loaded main.js');
+        };
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

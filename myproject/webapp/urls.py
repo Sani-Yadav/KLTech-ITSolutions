@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -12,5 +13,6 @@ urlpatterns = [
     path('team.html', views.team, name='team'),
     path('testimonial.html', views.testimonial, name='testimonial'),
     path('404.html', views.error_404, name='404'),
+    path('debug/', TemplateView.as_view(template_name='debug.html'), name='debug'),
 ]
 
