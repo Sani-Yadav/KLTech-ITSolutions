@@ -509,31 +509,7 @@
           <h5 class="text-primary">Our Team</h5>
           <h1>Meet Our Expert Team</h1>
         </div>
-        <div class="owl-carousel team-carousel">
-          <!-- Initialize Owl Carousel -->
-          <script>
-            $(document).ready(function(){
-              $(".owl-carousel").owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                responsive: {
-                  0: {
-                    items: 1
-                  },
-                  600: {
-                    items: 2
-                  },
-                  1000: {
-                    items: 3
-                  }
-                }
-              });
-            });
-          </script>
+        <div class="owl-carousel team-carousel owl-theme">
           <!-- Team Member 1 - Corrected -->
           <div class="rounded team-item">
             <div class="team-content">
@@ -873,74 +849,40 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    
     <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    <!-- Custom Scripts -->
     <script>
-    (function ($) {
-        "use strict";
-
-        // Spinner
-        var spinner = function () {
-            setTimeout(function () {
-                if ($('#spinner').length > 0) {
-                    $('#spinner').removeClass('show');
-                }
-            }, 1000);
-        };
-        spinner();
-        
-        
-        // Initiate the wowjs
-        new WOW().init();
-        
-        
-       // Back to top button
-       $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-        });
+    (function($) {
+        // Back to top button
         $('.back-to-top').click(function () {
             $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
             return false;
         });
 
-
-        // Team carousel
+        // Initialize Team Carousel
         $(".team-carousel").owlCarousel({
-            autoplay: true,
-            smartSpeed: 1000,
-            center: false,
-            dots: false,
             loop: true,
-            margin: 50,
-            nav : true,
-            navText : [
+            margin: 20,
+            nav: true,
+            navText: [
                 '<i class="bi bi-arrow-left"></i>',
                 '<i class="bi bi-arrow-right"></i>'
             ],
-            responsiveClass: true,
             responsive: {
-                0:{
-                    items:1
-                },
-                768:{
-                    items:2
-                },
-                992:{
-                    items:3
-                }
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 3 }
             }
         });
 
-
-        // Testimonial carousel
-
+        // Initialize Testimonial Carousel
         $(".testimonial-carousel").owlCarousel({
             autoplay: true,
             smartSpeed: 1500,
@@ -948,44 +890,28 @@
             dots: true,
             loop: true,
             margin: 0,
-            nav : true,
+            nav: true,
             navText: false,
-            responsiveClass: true,
             responsive: {
-                0:{
-                    items:1
-                },
-                576:{
-                    items:1
-                },
-                768:{
-                    items:2
-                },
-                992:{
-                    items:3
-                }
+                0: { items: 1 },
+                576: { items: 1 },
+                768: { items: 2 },
+                992: { items: 3 }
             }
         });
 
-
-         // Fact Counter
-
-         $(document).ready(function(){
-            $('.counter-value').each(function(){
-                $(this).prop('Counter',0).animate({
-                    Counter: $(this).text()
-                },{
-                    duration: 2000,
-                    easing: 'easeInQuad',
-                    step: function (now){
-                        $(this).text(Math.ceil(now));
-                    }
-                });
+        // Fact Counter
+        $('.counter-value').each(function(){
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                easing: 'easeInQuad',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
             });
         });
-
-
-
     })(jQuery);
     </script>
     
